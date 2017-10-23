@@ -14,6 +14,7 @@ function convtrack() {
 cdirs=$(ls -d */ | egrep -v "conv")
 
 if [[ -z "${cdirs}" ]] ; then
+	mkdir -p conv
 	convtrack
 else
 	for cdir in ${cdirs} ; do
